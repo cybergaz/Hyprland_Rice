@@ -1,0 +1,133 @@
+* {
+  /*border: solid;*/
+  /*border-radius: 200px;*/
+  /*border-color: black;*/
+  border-style: solid;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 15px;
+  /*min-height: 0;*/
+  margin: -2px 2px;
+}
+
+window#waybar {
+  background: transparent;
+  opacity: 0.9;
+  color: blueviolet;
+}
+
+tooltip {
+  background: #11181c;
+  opacity: 0.7;
+  border: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+#workspaces button {
+  padding: 2px;
+  color: black;
+  margin-right: 5px;
+
+}
+
+#workspaces button.active {
+  color: cyan;
+  background: transparent;
+  /*border-color: #11181c;*/
+  /*border-radius: 25px;*/
+}
+
+#workspaces button.focused {
+  color: #a6adc8;
+  background: transparent;
+  /*border-color: #11181c;*/
+  /*border-radius: 20px;*/
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: transparent;
+  /*border-color: #11181c;*/
+  /*border-radius: 20px;*/
+}
+
+#workspaces button:hover {
+  background: transparent;
+  color: #cdd6f4;
+  /*border-color: #11181c;*/
+  /*border-radius: 20px;*/
+}
+
+#cpu,#memory,#idle_inhibitor,#temperature, #custom-caffeine, #clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight {
+  /*background: #11181c;*/
+  border: solid;
+  border-radius: 2px;
+  border-color: black;
+  padding: 0px 10px;
+  margin: 3px 0px;
+}
+
+#tray {
+  border-color: black;
+  border-radius: 10px;
+  margin-right: 4px;
+}
+
+
+#workspaces {
+  border-radius: 10px;
+  padding-right: 0px;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+
+#custom-caffeine {
+  color: #3a0e82;
+  border-radius: 10px 0px 0px 10px;
+  padding-right: 12px;
+}
+
+#idle_inhibitor{
+  color: black;
+}
+#idle_inhibitor.activated {
+  color: whitesmoke;
+}
+
+#cpu{
+  color: #03374d;
+}
+
+#memory{
+  color: #41056e;
+}
+
+#temperature {
+  color: darkorange;
+}
+
+#clock {
+  color: black;
+  border-radius: 10px;
+}
+
+#network {
+  color: #1342ab;
+}
+
+#pulseaudio {
+  color: darkmagenta;
+}
+
+#battery{
+  color:  darkgreen;
+  border-radius: 0 10px 10px 0;
+  margin-right: 5px;
+}
+
+#backlight{
+  color: #11181c;
+}
