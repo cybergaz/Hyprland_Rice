@@ -15,6 +15,15 @@ kickoff <br>
 
 
 #gtk3 theme -> deepin-dark
-#gtk3 icon ->
+#gtk3 icon -> 
+
+ <br>
+gurb theme -> blur-grub2
+<br>
+sddm -> custom archlinux-simplyblack   
+   	
+	- locate sddm.conf 	
+	- copy code from "/usr/lib/sddm/sddm.conf.d/default.conf" that's in the repo 	
+	- 	
 
 
