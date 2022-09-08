@@ -2,16 +2,16 @@
 
 Dependencies :
 
-make
-wlroots
-wayland-protocols
-pkgconf
-ninja
-swaybg
-waybar-hyprland
-swaylock-effects
-waylogout-git
-kickoff
+make <br>
+wlroots <br>
+wayland-protocols <br>
+pkgconf <br>
+ninja <br>
+swaybg <br>
+waybar-hyprland <br>
+swaylock-effects <br>
+waylogout-git <br>
+kickoff <br>
 
 
 #gtk3 theme -> deepin-dark
