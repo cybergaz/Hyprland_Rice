@@ -49,7 +49,7 @@ gsettings set org.gnome.desktop.interface cursor-theme Layan-cursors
 
  <br>
 
-###cursor theme :
+## cursor theme :
 	- i have layan cursor configured
 	- Download it by - yay -S layan-cursor-theme-git
 	- and then edit "/usr/share/icons/default/index.theme" , for global config
