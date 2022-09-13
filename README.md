@@ -21,6 +21,8 @@ nemo
 sddm
 hyprland-git 
 
+
+
 #gtk stuff....  
 gsettings set org.gnome.desktop.interface icon-theme uos  
 gsettings set org.gnome.desktop.interface gtk-theme 'Layan'  
@@ -51,3 +53,17 @@ gsettings set org.gnome.desktop.interface cursor-theme Layan-cursors
 	- i have layan cursor configured
 	- Download it by - yay -S layan-cursor-theme-git
 	- and then edit "/usr/share/icons/default/index.theme" , for global config
+
+
+
+
+## extra stuff -->  
+	# pkgs :  
+	
+	- mtpfs   --> for media transfer protocol  
+	- jmtpfs --> for later version supports  
+	- gvfs-mtp --> for automount and all  
+	- gvfs-gphoto2  --> for picture transfer protocol  
+
+
+	
