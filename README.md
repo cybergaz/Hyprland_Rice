@@ -1,26 +1,27 @@
 
 ## Dependencies :
 
-	make   
-	wlroots   
-  	wayland-protocols   
-  	pkgconf    
-  	ninja   
-  	swaybg    
-  	waybar-hyprland   
-  	swaylock-effects   
-  	waylogout-git  
-  	kickoff  
-  	brightnessctl  
-  	mako  
-  	swayidle  
-  	termite  
-  	kitty  
-  	grim 
-  	nemo   
-  	sddm
-  	hyprland-git 
-
+```
+make   
+wlroots   
+wayland-protocols   
+pkgconf    
+ninja   
+swaybg    
+waybar-hyprland   
+swaylock-effects   
+waylogout-git  
+kickoff  
+brightnessctl  
+mako  
+swayidle  
+termite  
+kitty  
+grim 
+nemo   
+sddm
+hyprland-git 
+```
 
 
 ## gtk stuff....  
