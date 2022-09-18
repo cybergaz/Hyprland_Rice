@@ -29,7 +29,7 @@ hyprland-git
 	gsettings set org.gnome.desktop.interface icon-theme uos  
 	gsettings set org.gnome.desktop.interface gtk-theme 'Layan'  
 	gsettings set org.gnome.desktop.interface cursor-theme Layan-cursors  
-
+> you can use **lxappearance** to set up additional gtk stuffs.  
 
 ## theming -->
   
