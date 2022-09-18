@@ -61,7 +61,7 @@ tooltip {
   /*border-radius: 20px;*/
 }
 
-#cpu,#memory,#idle_inhibitor,#temperature, #custom-caffeine, #clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight {
+#cpu,#memory,#custom-player,#idle_inhibitor,#temperature, #custom-caffeine, #clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight {
   /*ckground: #11181c;*/
   border: solid;
   border-radius: 2px;
@@ -75,6 +75,7 @@ tooltip {
   border-radius: 10px;
   margin-right: 4px;
 }
+
 
 
 #workspaces {
@@ -130,4 +131,8 @@ tooltip {
 
 #backlight{
   color: #aecfb6;
+}
+
+#custom-player{
+  color: #1cfc58;
 }

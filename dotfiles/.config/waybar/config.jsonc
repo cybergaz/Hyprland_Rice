@@ -3,16 +3,16 @@
   "position": "top", 
   "height": 20,
   
-  "modules-left":   ["wlr/workspaces"],
+  "modules-left":   ["wlr/workspaces","custom/player"],
   "modules-center": ["clock"],
-  "modules-right":  ["tray", "custom/caffeine","idle_inhibitor", "cpu" ,"memory","temperature", "network","speed", "backlight", "pulseaudio","battery"],
+  "modules-right":  ["tray", "custom/caffeine","idle_inhibitor", "cpu" ,"memory","temperature", "network", "backlight", "pulseaudio","battery"],
 
   "wlr/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
     "on-click": "activate",
     //"format": "{icon}",
-    "persistent_workspaces": {
+    /*"persistent_workspaces": {
       "1": [],
       "2": [],
       "3": [],
@@ -23,7 +23,7 @@
       "8": [],
       "9": [],
       "10": []
-    },
+    },*/
     /*"format-icons": {
       "1": "",
       "2": "",
@@ -39,6 +39,14 @@
       "active": ""
     }*/
   },
+  "custom/player": {
+    "exec": "/usr/bin/python3 /home/gaz/.config/waybar/scripts/player.py --player spotify",
+    "format": "{}  ",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+},
   "custom/caffeine": {
     "exec": "~/.config/waybar/scripts/caffeine.sh",
     "return-type": "json",
@@ -104,9 +112,6 @@
     "format-alt": "Speed | Down, {bandwidthDownBits}, Up: {bandwidthUpBits}",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | {ifname}: {ipaddr}/{cidr}"
     
-  },
-  "speed":{
-    "tooltip-format-wifi": "Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
