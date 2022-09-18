@@ -159,8 +159,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(git
-
-	zsh-autosuggestions)
+	zsh-autosuggestions
+	web-search)
 
 
 
@@ -234,6 +234,14 @@ function workspace() {
 }
 function confg(){
 	"$HOME/.config/$1"
+}
+
+# git push with my ssh public key authentication method
+function ssh-push(){     
+	eval "$(ssh-agent -s)"
+	ssh-add ~/.ssh/my_id
+	git push $1 $2    #where $1 -> origin (or any remote) and $2 -> main/master
+
 }
 
 
