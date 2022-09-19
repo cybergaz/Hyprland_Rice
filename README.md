@@ -64,5 +64,7 @@ hyprland-git
 	- gvfs-mtp --> for automount and all  
 	- gvfs-gphoto2  --> for picture transfer protocol  
 
+> #tips :  
+	- install lolcat and figlet via pip instead pacman  
 
 	
