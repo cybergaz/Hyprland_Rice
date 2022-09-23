@@ -40,8 +40,8 @@
     }*/
   },
   "custom/player": {
-    "exec": "/usr/bin/python3 /home/gaz/.config/waybar/scripts/player.py --player spotify",
-    "format": "{}  ",
+    "exec": "/usr/bin/python3 /home/gaz/.config/waybar/scripts/player.py",
+    "format": "{}",
     "return-type": "json",
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
