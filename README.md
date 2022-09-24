@@ -1,3 +1,5 @@
+The main purpose of this README is , I usually just forget what changes I've done , so ... 
+
 
 ## Dependencies :
 
@@ -10,19 +12,30 @@ ninja
 swaybg    
 waybar-hyprland   
 swaylock-effects   
-waylogout-git  
-kickoff  
+waylogout-git   
 brightnessctl  
+pulseaudio-ctl  
 mako  
-swayidle  
-termite  
-kitty  
+swayidle    
 grim 
 nemo   
 sddm
 hyprland-git 
 ```
+## Additional packages :
+	kickoff  
+	kitty  
+	alacritty  
+	nemo  
+	ranger  
+	neofetch  
+	nitch  
+	btop  
+	swayimg 
+	swww 
+		
 
+<br>
 
 ## gtk stuff....  
 
