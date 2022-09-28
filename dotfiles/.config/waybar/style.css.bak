@@ -28,7 +28,7 @@ tooltip {
 
 #workspaces button {
   padding: 2px;
-  color: #013355;
+  color: darkcyan;
   margin-right: 5px;
 
 }
@@ -85,30 +85,30 @@ tooltip {
   margin-left: 5px;
 }
 
-/*#custom-caffeine {
+#custom-caffeine {
   color: #10c6eb;
   border-radius: 10px 0px 0px 10px;
   padding-right: 12px;
-}*/
+}
 
 #idle_inhibitor{
-  color: #213354;
+  color: black;
 }
 #idle_inhibitor.activated {
   color: whitesmoke;
 }
 
 #cpu{
-  color: #8b7a8a;
+  color: #27e3ca;
 }
 
 #memory{
-  color: #8b7a8a;
+  color: #27e3ca;
 }
 
-/*#temperature {
+#temperature {
   color: darkorange;
-}*/
+}
 
 #clock {
   color: white;
@@ -116,21 +116,21 @@ tooltip {
 }
 
 #network {
-  color: #aecfff;
+  color: #10c6eb;
 }
 
 #pulseaudio {
-  color:  #aecfff;
+  color: #bd8bc9;
 }
 
 #battery{
-  color: #1cfcee;
+  color: #1cfc58;
   border-radius: 0 10px 10px 0;
   margin-right: 5px;
 }
 
 #backlight{
-  color: #aecfff;
+  color: #aecfb6;
 }
 
 #custom-player{
