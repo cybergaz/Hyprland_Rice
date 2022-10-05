@@ -23,15 +23,15 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-  #window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 115
+    lines: 28
 
   # Window position (changes require restart)
   #
@@ -45,9 +45,9 @@
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+    x: 15
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -67,8 +67,7 @@
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  window:
-      opacity: 0.3
+  opacity: 0.3
 
   # Startup Mode (changes require restart)
   #
@@ -109,16 +108,16 @@
   #multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -190,11 +189,11 @@
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
   primary:
     background: '#000000'
-    foreground: '#c5c8c6'
+    foreground: '#dddddd'
 
     # Bright and dim foreground colors
     #
@@ -281,35 +280,35 @@
   #  background: CellForeground
 
   # Normal colors
-  #normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
+  normal:
+    black:   '#000000'
+    red:     '#F43E5C'
+    green:   '#27d796'
+    yellow:  '#f09383'
+    blue:    '#1ea0dc'
+    magenta: '#8d57f0'
+    cyan:    '#72a7b1'
+    white:   '#dddddd'
 
   # Bright colors
-  #bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
+  bright:
+    black:   '#5d5e5f'
+    red:     '#e95379'
+    green:   '#09f7a0'
+    yellow:  '#fac29a'
+    blue:    '#176bea'
+    magenta: '#6116ec'
+    cyan:    '#69bbad'
+    white:   '#ffffff'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
   #dim:
-  #  black:   '#131415'
-  #  red:     '#864343'
-  #  green:   '#777c44'
+  # black:   '#000000'
+  # red:     '#000000'
+  # green:   '#000000'
   #  yellow:  '#9e824c'
   #  blue:    '#556a7d'
   #  magenta: '#75617b'
@@ -374,24 +373,23 @@
   #
   #command: None
 
-#selection:
+selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
-#cursor:
-  # Cursor style
-  #style:
+cursor:
+  style:
     # Cursor shape
     #
     # Values for `shape`:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    #shape: Block
+    shape: Underline
 
     # Cursor blinking state
     #
@@ -400,7 +398,7 @@
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    #blinking: Off
+    blinking: Always
 
   # Vi mode cursor style
   #
@@ -408,10 +406,10 @@
   # the style of the active value of the normal cursor.
   #
   # See `cursor.style` for available options.
-  #vi_mode_style: None
+  vi_mode_style: Underline
 
   # Cursor blinking interval in milliseconds.
-  #blink_interval: 750
+  blink_interval: 500
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -419,7 +417,7 @@
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  #thickness: 0.15
+  thickness: 0.20
 
 # Live config reload (changes require restart)
 #live_config_reload: true

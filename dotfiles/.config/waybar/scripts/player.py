@@ -13,7 +13,8 @@ logger = logging.getLogger(__name__)
 
 def write_output(text, player):
     logger.info('Writing output')
-
+    if len(text) > 75:
+        text = text[:75] + "......."
     output = {'text': text,
               'class': 'custom-' + player.props.player_name,
               'alt': player.props.player_name}

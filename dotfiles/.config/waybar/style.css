@@ -8,6 +8,7 @@
   font-size: 15px;
   /*min-height: 0;*/
   margin: -2px 2px;
+  
 }
 
 window#waybar {
@@ -43,6 +44,8 @@ tooltip {
 #workspaces button.focused {
   color: #a6adc8;
   background: transparent;
+
+
   /*border-color: #11181c;*/
   /*border-radius: 20px;*/
 }
