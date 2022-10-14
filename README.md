@@ -1,3 +1,8 @@
+TO DOs :
+	- add current focused application status in waybar
+	- add animated player interface inside waybar
+	- add useful funtional well animated widgets on desktop and make them static for all desktops and running applications must come top of them
+
 
 The main purpose of this README is , I usually just forget what changes I've done , so ... 
 
