@@ -78,6 +78,7 @@ hyprland-git
 ## extra stuff -->  
     
 > #pkgs :  
+
 	
 	- mtpfs   --> for media transfer protocol  
 	- jmtpfs --> for later version supports  
