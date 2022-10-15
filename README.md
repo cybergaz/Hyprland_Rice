@@ -45,12 +45,13 @@ hyprland-git
 
 ## gtk stuff....  
 
-	gsettings set org.gnome.desktop.interface icon-theme uos  
+	gsettings set org.gnome.desktop.interface icon-theme bloom  ( yay -S deepin-icon-theme-git ) 
 	gsettings set org.gnome.desktop.interface gtk-theme 'Layan'  
 	gsettings set org.gnome.desktop.interface cursor-theme Layan-cursors  
+
 > you can use **lxappearance** to set up additional gtk stuffs. 	
 
-## theming -->
+## theming -->  "overall catpuccin mocha environment"  
   
 > **gtk3 theme** -> Layan  
 	- to set up , run "gsettings set org.gnome.desktop.interface gtk-theme 'Layan' "   
@@ -68,8 +69,8 @@ hyprland-git
   
 > **cursor theme** :
 	- i have layan cursor configured  
-	- Download it by - yay -S layan-cursor-theme-git  
-	- and then edit "/usr/share/icons/default/index.theme" , for global config  
+	- Download it by - yay -S layan-cursor-theme-git ( Catppuccin-Mocha-Lavender-Cursors ){new}  
+	- and then edit "/usr/share/icons/default/index.theme" , for global config  { use **lxappearance** in case when few applications won't load the cursor}
 
 
 
