@@ -1,16 +1,21 @@
 #### Hyprland Config ####
 #gsettings set org.gnome.desktop.interface gtk-themes Matcha-dark-sea 
 #exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
 #exec-once=systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+#systemctl --user import-environment SWAYSOCK
 #exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-exec-once=swaybg -i /home/gaz/Downloads/img/3423.jpg
+#exec-once=hyprctl setcursor Catppuccin-Mocha-Lavender-Cursors 10 && hyprctl reload
+exec-once=swaybg -i /home/gaz/Downloads/img/ori1.jpg
 
 exec-once=waybar
 blurls=waybar
-exec-once=kitty sh ~/scripts/hello.sh
-exec-once=sleep 1 && kitty
-
+blurls=wofi
+blurls=notifications
+exec-once=alacritty -e ~/scripts/hello.sh
+exec-once=sleep 1 && alacritty 
+#exec-once=sleep 1.5 && alacritty --hold -e neofetch --ascii_distro dragonfly
 #exec-once=blueman-applet
 exec-once=mako
 exec-once=swayidle -w before-sleep "~/.config/hypr/scripts/lock.sh"
@@ -29,11 +34,16 @@ input {
 
     touchpad {
         natural_scroll=yes
+	#disable_while_typing=1
+	#clickfinger_behavior=1
+	#middle_button_emulation=1
+	#tap-to-click=0
+	#
     }
 }
 
 general {
-    sensitivity=1.0 # for mouse cursor
+    sensitivity=1 # for mouse cursor
     main_mod=SUPER
 
     gaps_in=4
@@ -45,35 +55,55 @@ general {
     apply_sens_to_raw=0 # whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
 
     damage_tracking=full # leave it on full unless you hate your GPU and want to make it suffer
+
+    cursor_inactive_timeout = 10
 }
 
-decoration {
-    rounding=8
+decoration { 
+    rounding=12
     blur=1
-    blur_size=5 # minimum 1
+    blur_size=6 # minimum 1
     blur_passes=3 # minimum 1, more passes = more resource intensive.
-    # Your blur "amount" is blur_size * blur_passes, but high blur_size (over around 5-ish) will produce artifacts.
-    # if you want heavy blur, you need to up the blur_passes.
-    # the more passes, the more you can up the blur_size without noticing artifacts.
+
+    multisample_edges=0
+    blur_ignore_opacity=1
+    blur_new_optimizations=1
+
+    active_opacity=0.92
+    inactive_opacity=0.86
+    fullscreen_opacity=0.93
+    #drop_shadow=0
+    #shadow_range=int
+    #shadow_render_power=int
+    #shadow_ignore_window=bool
+    #col.shadow=col
+    #col.shadow_inactive=col
+    #shadow_offset=vec2
 }
 
-bezier=hello,0,0,0,1.17
+#bezier=hello,0,0,0,1.17
+bezier=overshot,0.13,0.99,0.29,1.1
 
 animations {
     enabled=1
-    animation=windows,1,3,default,slide             # slide or popin
+    animation=windows,1,3,default,slide           # slide or popin
     #animation=windowsOut,1,3,default,slide
     animation=border,1,3,default
     animation=fade,1,6,default
-    animation=workspaces,1,3,default,slidevert            # these can be    slide , slidevert , fade
+    animation=workspaces,1,3,overshot,slide           # these can be    slide , slidevert , fade
 }
 
 dwindle {
     pseudotile=0 # enable pseudotiling on dwindle
 }
-
 gestures {
     workspace_swipe=yes
+    workspace_swipe_fingers=3
+    #workspace_swipe_distance=1000
+    #workspace_swipe_invert=1
+    #workspace_swipe_min_speed_to_force=40
+    #workspace_swipe_cancel_ratio=1
+
 }
 
 misc {
@@ -83,14 +113,7 @@ misc {
     no_vfr=false
 }
 
-windowrule=fullscreen,wlogout
-windowrule=animation fade,wlogout
-windowrule=size 100%,wlogout
-windowrule=opacity 0.6,wlogout
-
 #___________________________________
-#bezier=hello,0.74,0.17,0.53,0.76
-
 
 # example window rules
 # for windows named/classed as abc and xyz
@@ -103,8 +126,23 @@ windowrule=opacity 0.6,wlogout
 #windowrule=animation slide up , kitty
 #windowrule=opaque,alacritty
 
+
+windowrule=opacity 0.94 0.9,title:Visual
+windowrule=animation popin 40%,title:Visual
+#windowrule=noblur,title:Visual
+#windowrule=noblur,subl
+
+windowrule=opacity 0.93 0.93,title:Microsoft
+windowrule=opacity 0.92 0.91,firefox
+#windowrule=noblur,title:Microsoft
+
+
+windowrule=opacity 0.95 0.95,mpv
+
 windowrule=float,blueman
-windowrule=center,blueman
+windowrule=opacity 0.8,blueman
+windowrule=animation popin 50%,blueman
+#windowrule=center,blueman
 
 windowrule=float,file_progress
 windowrule=center,file_progress
@@ -113,71 +151,108 @@ windowrule=center,confirm
 windowrule=float,dialog
 windowrule=float,download
 windowrule=center,download
+windowrule=animation popin 50%,download
 windowrule=float,notification
+windowrule=animation popin 50%,notification
 windowrule=float,error
+windowrule=animation popin 50%,error
 windowrule=float,splash
 windowrule=float,confirmreset
 windowrule=float,title:Open File
 windowrule=center,title:Open File
+windowrule=opacity 0.86 0.8,title:Open File
+windowrule=animation popin 50%,title:Open File
 windowrule=float,title:branchdialog
+windowrule=animation popin 50%,branchdialog
+
+#windowrule=size 1200 700,nemo
+windowrule=center,nemo
+windowrule=animation slide,nemo
+windowrule=opacity 0.86 0.78,nemo
+windowrule=float,nemo
+
+windowrule=opacity 0.86 0.8,pavucontrol
+windowrule=float,pavucontrol
+#windowrule=center,pavucontrol
+#windowrule=size 1200 700,pavucontrol
+windowrule=animation popin 50%,pavucontrol
+#windowrule=workspace 8,nemo
+
+windowrule=float,kitty
+windowrule=animation popin 40%,kitty
+windowrule=opacity 1 0.88,kitty
+#windowrule=noblur,kitty
+windowrule=opacity 0.92 0.7,subl
+
+#windowrule=float,title:Alacritty
+windowrule=opacity 1 0.9,title:Alacritty
+windowrule=animation slide left,title:Alacritty
+#windowrule=size 1200 700,title:Alacritty
+windowrule=float,title:nmtui
+windowrule=float,title:ranger
+windowrule=float,title:btop
+windowrule=animation popin 30%,title:nmtui
+windowrule=animation popin 30%,title:ranger
+windowrule=animation popin 30%,title:btop
+windowrule=opacity 0.6 0.5,title:nmtui
+bind=SUPERSHIFT,E,exec,alacritty -t ranger -e ranger
+bind=SUPER,N,exec,alacritty -t nmtui -e nmtui
+bind=SUPER,ESCAPE,exec,alacritty -t btop -e btop
 
 
-#windowrule=size 1200 700,thunar
-windowrule=float,alacritty
-#windowrule=center,thunar
-windowrule=animation slide,thunar
-windowrule=opacity 0.9 0.86,thunar
-windowrule=opacity 0.96,title:
-#windowrule=workspace 8,thunar
+windowrule=float,gnome-system-monitor
+windowrule=center,gnome-system-monitor
+windowrule=opacity 0.85 0.8,gnome-system-monitor
 
-windowrule=opacity 1 0.95,kitty
-windowrule=opacity 0.3,mircosoft-edge-stable
-windowrule=opacity 0.9 0.85,subl
-windowrule=opacity 0.85 0.78,code
+bind=CTRLSHIFT,ESCAPE,exec,GTK_THEME=Layan:dark gnome-system-monitor
 
-windowrule=float,termite
-#windowrule=opacity 0.9 0.7,termite
-windowrule=animation popin 90%,termite
-windowrule=size 1200 700,termite
-windowrule=center,termite
-bind=SUPERSHIFT,E,exec,termite -e ranger
-bind=SUPER,N,exec,termite -e nmtui
+#windowrule=center,alacritty
 
 windowrule=float,telegram
-windowrule=opacity 0.95 0.9,telegram
+windowrule=opacity 0.9 0.85,telegram
 windowrule=center,telegram
-windowrule=size 1200 700,telegram
+#windowrule=size 1200 700,telegram
 windowrule=workspace 9,telegram
 
-
-windowrule=opacity 0.4,microso
 windowrule=float,swayimg
 
 # example binds
-bind=SUPER,RETURN,exec,kitty
-bind=SUPER,T,exec,termite
+bind=SUPER,RETURN,exec,alacritty
+bind=SUPER,T,exec,kitty
 bind=SUPER,Q,killactive,
 bind=SUPERSHIFT,M,exit,
-bind=SUPER,E,exec,thunar
+bind=SUPER,E,exec,nemo
 bind=SUPER,V,togglefloating,
 bind=SUPER,D,exec,kickoff
-bind=ALT,SPACE,exec,kickoff
-bind=SUPER,W,exec,microsoft-edge-stable
+bind=ALT,SPACE,exec,wofi --show drun
+blurls=launcher
+bind=SUPERSHIFT,W,exec,microsoft-edge-stable
+bind=SUPER,W,exec,firefox
+bind=SUPER,C,exec,firefox --new-tab web.whatsapp.com
 bind=SUPER,up,fullscreen
+#windowrule=float,kitty
 
 bind=SUPER,P,exec,/home/gaz/.config/hypr/scripts/waylogout.sh
 bind=SUPER,L,exec,~/.config/hypr/scripts/lock.sh
 
 bind=,Print,exec,grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%s.png')
-bind=SUPER,Print,exec,grim $HOME/Pictures/Screenshots/$(date +'%s.png')
+bind=SUPER,Print,exec,grim $HOME/Pictures/Screenshots/$(date +'%s.png') && notify-send "Grim" "ScreenShot Captured Succesfully...."
 
 # add on
-#bind=,XF86PowerOff,exec,dm-tool switch-to-greeter 
+bind=,XF86PowerOff,exec,dm-tool switch-to-greeter 
 binde=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+bind=SHIFT,F2,exec,brightnessctl set 1
 binde=,XF86MonBrightnessUp,exec,brightnessctl set 5%+
+bind=SHIFT,F3,exec,brightnessctl set 96000
 binde=,XF86AudioRaiseVolume,exec,pulseaudio-ctl up
 binde=,XF86AudioLowerVolume,exec,pulseaudio-ctl down
 bind=,XF86AudioMute,exec,pulseaudio-ctl mute
+bind=,XF86AudioPlay,exec,playerctl play-pause
+bind=,XF86AudioNext,exec,playerctl next
+bind=,XF86AudioPrev,exec,playerctl previous
+
+bind=SUPERSHIFT,B,exec,/home/gaz/scripts/bluetooth.sh
+bind=SUPER,B,exec,/home/gaz/scripts/bluetooth_particular.sh     #for my galaxy buds
 #bind=ALT,left,movefocus,l
 #bind=ALT,right,movefocus,r
 #bind=ALT,up,movefocus,u
@@ -221,6 +296,9 @@ bind=SUPERSHIFT,down,movewindow,d
 
 bind=SUPERSHIFT,F,workspaceopt,allpseudo
 
+
+bindm=SUPER,mouse:272,movewindow
+bindm=SUPER,mouse:273,resizewindow
 
 # submaps -------------
 bind=ALT,R,submap,resize # will switch to a submap called resize
