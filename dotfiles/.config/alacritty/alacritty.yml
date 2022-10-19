@@ -289,7 +289,7 @@ colors:
   normal:
     black:   '#000000'
     red:     '#F43E5C'
-    green:   '#a6e3a1'
+    green:   '#1fedb3'
     yellow:  '#f09383'
     blue:    '#1ea0dc'
     magenta: '#cba6f7'
