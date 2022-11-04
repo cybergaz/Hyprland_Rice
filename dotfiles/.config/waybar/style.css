@@ -7,13 +7,11 @@
   font-weight: bold;
   font-size: 15px;
   /*min-height: 0;*/
-  margin: -2px 2px;
   
 }
 
 window#waybar {
   background: transparent;
-  opacity: 0.9;
   color: blueviolet;
 }
 
@@ -27,18 +25,22 @@ tooltip {
 }
 
 #workspaces button {
-  padding: 2px;
-  color: #013355;
-  margin: 0px 6px;
+  color: #012233;
+  margin: 0px 5px;
+  padding: 0px 5px;
+  background-color: #1e55a2;
+  border-radius: 100px;
+  opacity: 0.7 
 }
 
 #workspaces button.active {
-  color: #aecfff; 
-  background: transparent;
-  /*border-right:1px solid white;
-  border-left:1px solid white;*/
-  /*border-color: #11181c;*/
-  /*border-radius: 25px;*/
+  transition-duration:0.3s;
+  opacity:1;
+  color: #afcfff;
+  padding: 0px 13px;
+  background-color:#1e66f5;
+  border-radius: 100px;
+  
 }
 
 #workspaces button.focused {
@@ -60,6 +62,9 @@ tooltip {
 #workspaces button:hover {
   background: transparent;
   color: #cdd6f4;
+  padding: 0px 5px;
+  background-color:#1e66f5;
+  border-radius: 100px; 
   /*border-color: #11181c;*/
   /*border-radius: 20px;*/
 }
@@ -102,11 +107,16 @@ tooltip {
 }
 
 #cpu{
-  color: #8b7a8a;
+  color: #7c7f93;
+  /*background-color: #179299;
+  border-radius: 50px 0px 0px 50px;*/
+
 }
 
 #memory{
-  color: #8b7a8a;
+  color: #7c7f93;
+  /*background-color: #179299;
+  border-radius: 0px 50px 50px 0px;*/
 }
 
 /*#temperature {
@@ -114,28 +124,59 @@ tooltip {
 }*/
 
 #clock {
-  color: #aecfff;
-  border-radius: 10px;
+  color: black;
+  background-color: #7287fd;
+  border-radius: 100px;
+
+
+}
+#clock:hover {
+	transition-duration:0.5s;
+	color:#aecfff;
+	background-color: black;
 }
 
 #network {
-  color: #aecfff;
-}
+  color: #b4befe;
+  border-radius:100px;
+  background-color: #4c4f69;
 
-#pulseaudio {
-  color:  #aecfff;
+}
+#network:hover {
+	transition-duration:0.7s;
+	color: black;
+	background-color: #209fb5;
+
 }
 
 #battery{
-  color: #1cfcee;
-  border-radius: 0 10px 10px 0;
-  margin-right: 5px;
+  color: black;
+  margin-right: 10px;
+  background-color: #8839ef;
+  border-radius: 100px;
 }
 
 #backlight{
-  color: #aecfff;
+  color: #209fb5;
+  /*background-color: #209fb5;
+  border-radius: 50px 0px 0px 50px;*/
 }
 
+#pulseaudio {
+  color: #209fb5;
+  /*background-color: #209fb5;
+  border-radius: 0px 50px 50px 0px;*/
+
+}
+#pulseaudio:hover {
+	transition-duration:0.6s;
+	color: black;
+	background-color: #209fb5;
+	border-radius:100px;
+}
+
+
+
 #custom-player{
-  color: #aecfff;
+  color: #1cfcee;
 }

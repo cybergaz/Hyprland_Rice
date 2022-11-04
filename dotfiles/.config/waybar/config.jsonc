@@ -10,36 +10,9 @@
   "wlr/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
-    "on-click": "activate",
-    //"format": "{icon}",
-    /*"persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
-    },*/
-    /*"format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": "",
-      "10": "",
-      "default": "",
-      "active": ""
-    }*/
+    "on-click": "activate"
   },
-  "custom/player": {
+    "custom/player": {
     "exec": "/usr/bin/python3 /home/gaz/.config/waybar/scripts/player.py",
     "format": "{}",
     "return-type": "json",
@@ -57,28 +30,28 @@
   "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " 👁 👁" ,
+            "deactivated": " 👁 👁"
         }
     },
    "tray": {
     "icon-size": 13,
-    "spacing": 10
+    "spacing": 20
   },
   "backlight":{
     "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": ["","",""],
+    "format": "{icon} {percent}",
+    "format-icons": ["•","○","●","o","✺","🏐"],
     "on-scroll-up": "brightnessctl set 1%+",
     "on-scroll-down": "brightnessctl set 1%-",
-    "min-length": 6 
+    "min-length": 5 
   },
   "cpu":{
-  	"format": "{usage}% ",
+  	"format": "|  🩺 {usage}",
 	"tooltip": true
   },
   "memory":{
-  	"format": "{}% "
+  	"format": "{} 🎗  |"
   },
   /*"temperature": {
         // "thermal-zone": 2,
@@ -94,38 +67,38 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format": "{icon} {capacity}",
+    "format-charging": "⚡ {capacity}",
+    "format-plugged": "⚡ {capacity}",
     "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""]
   },
   "clock": {
-   "format": "{: %R   %d/%m}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+   "format": "{:%R}",
+    "on-click":"alacritty -t clock -e tty-clock -sb -C 4 & sleep 1.5 && pkill clock"
   },
   "network": {
-    "format-wifi": "直 {essid} ({signalStrength}%)",
+    "format-wifi": "📡 {essid} ",
     "format-ethernet": " {essid}",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "睊 Disconnected",
-    "format-alt": "Speed | Down, {bandwidthDownBits}, Up: {bandwidthUpBits}",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | {ifname}: {ipaddr}/{cidr}"
+    "format-disconnected": "! Disconnected",
+    "tooltip-format-wifi": "{signalStrength}% | ⬇ {bandwidthDownBits} ⬆ {bandwidthUpBits} | {ipaddr}/{cidr}",
+    "on-click":"alacritty -t nmtui -e nmtui"
     
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "~ Muted",
+    "format": "{icon} {volume} ",
+    "format-muted": "🔕 Quiet",
     "on-click": "pavucontrol",
     "scroll-step": 1,
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
+      "headphone": "🎧",
+      "hands-free": "🎧",
+      "headset": "🎧",
+      "phone": "📞",
+      "portable": "📞",
       "car": "",
-      "default": ["", "", "墳", ""]
+      "default": ["♪", "♪","♪"]
     }
   }
 }
