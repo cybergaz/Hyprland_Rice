@@ -1,4 +1,6 @@
-~/scripts/greetings.sh | lolcat 
+#nitch
+
+#~/scripts/greetings.sh 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 
@@ -13,6 +15,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
+[[ -s /home/gaz/.autojump/etc/profile.d/autojump.sh ]] && source /home/gaz/.autojump/etc/profile.d/autojump.sh
+
+	autoload -U compinit && compinit -u
 
 # If you come from bash you might have to change your $PATH.
 
@@ -218,18 +223,23 @@ source $ZSH/oh-my-zsh.sh
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias cpr='rsync -ah --progress'
 alias rat='rate-mirrors --allow-root arch | sudo tee /etc/pacman.d/mirrorlist'
 alias ss="shutdown now"
-
 alias sr="reboot"
 
 alias zshrc="vim ~/.zshrc"
+alias spd="speedtest"
 
 alias liveserver="live-server --browser=microsoft-edge-stable"
 alias lokate="sudo updatedb && sudo locate"
 alias hyper="vim ~/.config/hypr/hyprland.conf"
 function workspace() {
 	"$HOME/Desktop/workspace/$1" 
+
+}
+function learnspace() {
+	"$HOME/Desktop/learnspace/$1" 
 
 }
 function confg(){
@@ -244,9 +254,19 @@ function ssh-push(){
 
 }
 
+function usbmount() {
+	gio mount $(gio mount -li | grep -o -e "activation_root=.*" | cut -b 17-)
+	cd /run/user/1000/gvfs
+	ls
+}
 
-#alias jaava="cd /home/salazar/Desktop && code Java-Revision & microsoft-edge-stable 'https://github.com/Praveen-baghel/Java-Revision' & microsoft-edge-stable https://www.javaguides.net/p/java-tutorial-learn-java-programming.html"
+alias cin="xclip -selection c"
+alias cout="xclip -selection clipboard -o"
+alias gittoken="xclip -selection clipboard $HOME/Desktop/workspace/my_token"
+alias hhh="history | cut -b 8- | fzf | $shell"
 
+export MOZ_ENABLE_WAYLAND="1"
+export EDITOR="vim"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -258,3 +278,4 @@ function ssh-push(){
 #export PATH="$HOME/Downloads/jdk-18.0.2/bin:$HOME/Downloads/speedtest_dir:$PATH"
 
 
+export PATH=$PATH:/home/gaz/.spicetify
