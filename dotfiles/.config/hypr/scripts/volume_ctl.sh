@@ -12,11 +12,11 @@
 NotificationID_File=/tmp/volume_notification_id
 
 function get_volume {
-  amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
+     pulseaudio-ctl full-status | awk '{print $1;}'
 }
 
 function is_mute {
-  amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
+	pulseaudio-ctl full-status | awk '{print $1;}'
 }
 
 function get_notification_id {
