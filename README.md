@@ -58,7 +58,7 @@ hyprland-git
 > **gurb theme** -> blur-grub2    
   
 > **sddm theme **:  
-	- Download sddm theme you want ( i have custom sugar-candy installed )   
+	- Download sddm theme you want ( u can try sugar-candy or delicious ( animated theme ) )   
 	- and set the theme to your desired one with locations, at "/usr/lib/sddm/sddm.conf.d/default.conf"   
   
 > **cursor theme** :
