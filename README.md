@@ -71,7 +71,7 @@ hyprland-git
 
 ## extra stuff -->  
     
-> #pkgs :  
+> # pkgs :  
 
 	
 	- mtpfs   --> for media transfer protocol  
@@ -81,8 +81,12 @@ hyprland-git
 
 
 
-> #tips :
+> # tips :
 	```  
 	- install lolcat and figlet via pip instead pacman  
         ```
-	
+
+> # for emoji's stuff 
+    git clone https://github.com/dln/wofi-emoji.git
+    
+    yay -S wtype wl-clipboard ttf-twemoji-color noto-fonts-emoji
