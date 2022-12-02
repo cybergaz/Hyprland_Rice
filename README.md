@@ -1,3 +1,8 @@
+ToDo : ALT+SHIFT+TAB -> previuos application 
+        clipboard second and third last text shortcut keys
+
+
+
 The main purpose of this README is , I usually just forget what changes I've done , so ... 
 
 
@@ -87,6 +92,6 @@ hyprland-git
         ```
 
 > # for emoji's stuff 
-    git clone https://github.com/dln/wofi-emoji.git
-    
+    git clone https://github.com/dln/wofi-emoji.git   ( use your wofi-emoji script )   
+        
     yay -S wtype wl-clipboard ttf-twemoji-color noto-fonts-emoji
