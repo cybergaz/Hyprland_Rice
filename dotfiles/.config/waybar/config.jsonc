@@ -16,17 +16,8 @@
     "exec": "/usr/bin/python3 /home/gaz/.config/waybar/scripts/player.py",
     "format": "{}",
     "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+    "on-click": "playerctl play-pause"
 },
-  /*"custom/caffeine": {
-    "exec": "~/.config/waybar/scripts/caffeine.sh",
-    "return-type": "json",
-    "interval": 3,
-    "format-icons": ["﯈", ""],
-    "format": "{icon}"
-  },*/
   "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -41,18 +32,18 @@
   "backlight":{
     "device": "intel_backlight",
     "format": "{icon} {percent}",
-    "format-icons": ["•","○","●","o","✺","🏐"],
-    "on-scroll-up": "brightnessctl set 1%+",
-    "on-scroll-down": "brightnessctl set 1%-",
+    "format-icons": ["🌌","","","","✺","❄️"],
+    "on-scroll-down": "brightnessctl set 1%+",
+    "on-scroll-up": "brightnessctl set 1%-",
     "min-length": 5 
   },
   "cpu":{
-  	"format": "🩺 {usage}",
+  	"format": "🛸 {usage}",
 	"tooltip": true,
 	"on-click": "alacritty -t btop -e btop"
   },
   "memory":{
-  	"format": "{} 🎗"
+  	"format": "{} 🏔️"
   },
   /*"temperature": {
         // "thermal-zone": 2,

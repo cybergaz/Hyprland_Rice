@@ -1,18 +1,13 @@
 * {
-  /*border: solid;*/
-  /*border-radius: 200px;*/
-  /*border-color: black;*/
-  border-style: solid;
+  border: none;
   font-family: monospace;
   font-weight: bold;
   font-size: 15px;
-  /*min-height: 0;*/
-  
 }
 
 window#waybar {
-  background: transparent;
-  color: blueviolet;
+	background : transparent;
+	
 }
 
 tooltip {
@@ -28,20 +23,15 @@ tooltip {
   color: #9daddd;
   margin: 0px 5px;
   padding: 0px 5px;
-  /*background-color: #1e55a2;*/
-  border: 1.5px solid #1e66f5; 
-  border-radius: 100px;
-  opacity: 0.6
+  padding-bottom:1px;
+  opacity: 0.5
 }
 
 #workspaces button.active {
-  transition-duration:0.3s;
+  transition-duration:0.7s;
+  font-weight: bolder;
   opacity:1;
-  color: #1e66f5;
-  padding: 0px 13px;
-  border: 1.5px solid #aecfff;
-  border-radius: 100px;
-  
+  color: #aecfff;
 }
 
 #workspaces button:hover {
@@ -52,21 +42,6 @@ tooltip {
   opacity:1
 }
 
-#workspaces button.focused {
-  color: #a6adc8;
-  background: transparent;
-
-
-  /*border-color: #11181c;*/
-  /*border-radius: 20px;*/
-}
-
-#workspaces button.urgent {
-  color: #11111b;
-  background: transparent;
-  /*border-color: #11181c;*/
-  /*border-radius: 20px;*/
-}
 
 #cpu,#memory,#custom-player,#idle_inhibitor,#temperature, #custom-caffeine, #clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight {
   padding: 0px 10px;
@@ -79,91 +54,79 @@ tooltip {
   margin-right: 4px;
 }
 
-
-#idle_inhibitor{
-  color: #213354;
-  opacity:0.7
-}
-#idle_inhibitor.activated {
-  color: whitesmoke;
-  opacity:1
-}
-
-#cpu{
-  color: #216678;
-  border: 0.5px solid #7c7f93;
-  /*background-color: #179299;*/
-  border-right : none;
-  border-radius: 80px 0px 0px 80px;
-  opacity:0.6
-
-}
-
-#memory{
-  color: #216678;
-  /*background-color: #179299;*/
-  border: 0.5px solid #7c7f93;
-  border-left : none;
-  margin-right : 8px;
-  border-radius: 0px 80px 80px 0px;
-  opacity:0.6
-}
-
-/*#temperature {
-  color: darkorange;
-}*/
-
 #clock {
-  color: black;
-  background-color: #7287fd;
+  color: #aecfff;
+  border: 1px solid #1e66f5;
   border-radius: 100px;
   opacity:1
-
 
 }
 #clock:hover {
 	transition-duration:0.8s;
-	color:#aecfff;
-	background : transparent ;
-	border:1.5px solid #7287fd;
+	color:  black;
+	background-color : #7287fd;
 }
 
+
 #network {
-  color: #aecfff;
-  border:1.5px solid #7287fd;
-  border-radius:80px;
+  color: #7287fd;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 80px;
 
 }
 #network:hover {
 	transition-duration:0.8s;
 	color: black;
 	background-color: #7287fd;
+	border-radius: 80px;
 
 }
 
-#battery{
-  color: #cfffff;
-  margin-right: 7px;
-  margin-left: 8px;
-  border: 1.5px solid #8839ef;
-  border-radius: 80px;
+#idle_inhibitor{
+  color: #213354;
+  opacity:0.7
 }
+#idle_inhibitor.activated {
+  transition-duration: 2s;
+  color: whitesmoke;
+  opacity:1
+}
+
+#cpu{
+  color: #8a8a8a;
+  background-color: rgba(0,0,0,0.2);
+  border-right : none;
+  border-bottom : 0.4px solid gray;
+  border-radius: 80px 0px 0px 80px;
+  opacity:0.8
+
+}
+
+#memory{
+  color: #8a8a8a;
+  background-color: rgba(0,0,0,0.2);
+  border-left : none;
+  border-bottom: 0.4px solid gray;
+  margin-right : 8px;
+  border-radius: 0px 80px 80px 0px;
+  opacity:0.8
+}
+
 
 #backlight{
   color: #aecfff;
-  /*background-color: #209fb5;*/
-  border: 1px solid #7287fd;
   border-right: none;
+  border-bottom: 0.4px solid #4455ee;
   border-radius: 80px 0px 0px 80px;
-  opacity:0.85;
+  opacity:0.9;
 }
 
+
 #pulseaudio {
-  opacity:0.85;
+  opacity:0.9;
   color: #aecfff;
-  border: 1px solid #7287fd;
   border-left: none;
-  /*background-color: #209fb5;*/
+  border-bottom: 0.4px solid #4455ee;
   border-radius: 0px 80px 80px 0px;
 
 }
@@ -175,16 +138,21 @@ tooltip {
 	border-radius:80px;
 }
 
+#battery{
+  color: #aecfff;
+  margin: 3px 7px;
+  border: 0.7px solid #8839ef;
+  border-radius: 80px;
+}
 
 
 #custom-player{
   color: #7287fd;
   margin-left : 10px;
-  border-bottom: 0.5px solid #209fb5;
 }
 #custom-player:hover{
 	transition-duration:1s;
-	border: 1.5px solid #209fd5;
+	border: 0.6px solid #209fd5;
 	border-radius:80px;
 
 }

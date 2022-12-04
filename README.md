@@ -1,6 +1,6 @@
-ToDo : ALT+SHIFT+TAB -> previuos application 
-        clipboard second and third last text shortcut keys
-
+ToDo : > ALT+SHIFT+TAB -> previuos application
+       > clipboard second and third last text shortcut keys
+       > make a arch installation script like this --> 'https://github.com/Bugswriter/arch-linux-magic/blob/master/arch_install.sh'
 
 
 The main purpose of this README is , I usually just forget what changes I've done , so ... 

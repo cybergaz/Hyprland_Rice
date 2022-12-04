@@ -7,38 +7,50 @@
   font-weight: bold;
   font-size: 15px;
   /*min-height: 0;*/
-  margin: -2px 2px;
   
 }
 
 window#waybar {
   background: transparent;
-  opacity: 0.9;
   color: blueviolet;
 }
 
 tooltip {
-  background: transparent;
-  background:rgba(0,0,0,0.6);
+  color: #aecfff;
+  background:rgba(0,0,0,0.9);
   opacity: 0.95;
-  border-left: 0.5px solid white;
-  border-right: 0.5px solid white;
-  border-radius: 8px;
+  border-left: 1px solid #7287fd;
+  border-right: 1px solid #7287fd;
+  border-radius: 20px;
 }
 
 #workspaces button {
-  padding: 2px;
-  color: #013355;
-  margin: 0px 6px;
+  color: #9daddd;
+  margin: 0px 5px;
+  padding: 0px 5px;
+  padding-bottom:1px;
+  /*background-color: #1e55a2;*/
+  border: 1.5px solid #1e66f5; 
+  border-radius: 100px;
+  opacity: 0.6
 }
 
 #workspaces button.active {
-  color: #aecfff; 
-  background: transparent;
-  /*border-right:1px solid white;
-  border-left:1px solid white;*/
-  /*border-color: #11181c;*/
-  /*border-radius: 25px;*/
+  transition-duration:0.3s;
+  opacity:1;
+  color: #1e66f5;
+  padding: 0px 13px;
+  border: 1.5px solid #aecfff;
+  border-radius: 100px;
+  
+}
+
+#workspaces button:hover {
+  transition-duration:1s;
+  color: #aecfff;
+  background-color:#1e66f5;
+  border: 1.5px solid #1e66f5;
+  opacity:1
 }
 
 #workspaces button.focused {
@@ -57,18 +69,7 @@ tooltip {
   /*border-radius: 20px;*/
 }
 
-#workspaces button:hover {
-  background: transparent;
-  color: #cdd6f4;
-  /*border-color: #11181c;*/
-  /*border-radius: 20px;*/
-}
-
 #cpu,#memory,#custom-player,#idle_inhibitor,#temperature, #custom-caffeine, #clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight {
-  /*ckground: #11181c;*/
-  border: solid;
-  border-radius: 2px;
-  border-color: white;
   padding: 0px 10px;
   margin: 3px 0px;
 }
@@ -80,33 +81,33 @@ tooltip {
 }
 
 
-
-#workspaces {
-  border-radius: 10px;
-  padding-right: 0px;
-  padding-left: 5px;
-  margin-left: 5px;
-}
-
-/*#custom-caffeine {
-  color: #10c6eb;
-  border-radius: 10px 0px 0px 10px;
-  padding-right: 12px;
-}*/
-
 #idle_inhibitor{
   color: #213354;
+  opacity:0.7
 }
 #idle_inhibitor.activated {
   color: whitesmoke;
+  opacity:1
 }
 
 #cpu{
-  color: #8b7a8a;
+  color: #216678;
+  border: 0.5px solid #7c7f93;
+  /*background-color: #179299;*/
+  border-right : none;
+  border-radius: 80px 0px 0px 80px;
+  opacity:0.6
+
 }
 
 #memory{
-  color: #8b7a8a;
+  color: #216678;
+  /*background-color: #179299;*/
+  border: 0.5px solid #7c7f93;
+  border-left : none;
+  margin-right : 8px;
+  border-radius: 0px 80px 80px 0px;
+  opacity:0.6
 }
 
 /*#temperature {
@@ -114,28 +115,77 @@ tooltip {
 }*/
 
 #clock {
-  color: #aecfff;
-  border-radius: 10px;
+  color: black;
+  background-color: #7287fd;
+  border-radius: 100px;
+  opacity:1
+
+
+}
+#clock:hover {
+	transition-duration:0.8s;
+	color:#aecfff;
+	background : transparent ;
+	border:1.5px solid #7287fd;
 }
 
 #network {
   color: #aecfff;
-}
+  border:1.5px solid #7287fd;
+  border-radius:80px;
 
-#pulseaudio {
-  color:  #aecfff;
+}
+#network:hover {
+	transition-duration:0.8s;
+	color: black;
+	background-color: #7287fd;
+
 }
 
 #battery{
-  color: #1cfcee;
-  border-radius: 0 10px 10px 0;
-  margin-right: 5px;
+  color: #cfffff;
+  margin-right: 7px;
+  margin-left: 8px;
+  border: 1.5px solid #8839ef;
+  border-radius: 80px;
 }
 
 #backlight{
   color: #aecfff;
+  /*background-color: #209fb5;*/
+  border: 1px solid #7287fd;
+  border-right: none;
+  border-radius: 80px 0px 0px 80px;
+  opacity:0.85;
 }
 
-#custom-player{
+#pulseaudio {
+  opacity:0.85;
   color: #aecfff;
+  border: 1px solid #7287fd;
+  border-left: none;
+  /*background-color: #209fb5;*/
+  border-radius: 0px 80px 80px 0px;
+
+}
+#pulseaudio:hover {
+	opacity:1;
+	transition-duration:0.7s;
+	color: black;
+	background-color: #7287fd;
+	border-radius:80px;
+}
+
+
+
+#custom-player{
+  color: #7287fd;
+  margin-left : 10px;
+  border-bottom: 0.5px solid #209fb5;
+}
+#custom-player:hover{
+	transition-duration:1s;
+	border: 1.5px solid #209fd5;
+	border-radius:80px;
+
 }
