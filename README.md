@@ -1,6 +1,8 @@
-ToDo : > ALT+SHIFT+TAB -> previuos application
-       > clipboard second and third last text shortcut keys
-       > make a arch installation script like this --> 'https://github.com/Bugswriter/arch-linux-magic/blob/master/arch_install.sh'
+ToDo : > ALT+SHIFT+TAB -> previuos application   
+       > clipboard second and third last text shortcut keys     
+       > make a arch installation script like this --> 'https://github.com/Bugswriter/arch-linux-magic/blob/master/arch_install.sh'     
+       > switch back to kitty    
+       > ditch vscode , setup neovim for react and all     
 
 
 The main purpose of this README is , I usually just forget what changes I've done , so ... 
@@ -54,7 +56,9 @@ hyprland-git
   
 > **gtk3 theme** -> Layan  
 	- to set up , run "gsettings set org.gnome.desktop.interface gtk-theme 'Layan' "   
-	- and for the dark theme and stuff , you need to write it in settings.ini of GTK3.0          inside your .config dir   
+	- and for the dark theme and stuff , you need to write it in settings.ini of GTK3.0          inside your .config dir  
+    - settings.ini -->  gtk-application-prefer-dark-theme=true   
+                        gtk-theme-name=Layan-Dark   
   
 > **gtk icon** -> uos  
 	- download and place in /usr//share/icon   
