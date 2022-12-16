@@ -1,20 +1,25 @@
 {
   "layer": "top",
-  "position": "top", 
-  "height": 25,
+  "position": "top",
+  "mode": "dock",
+  "gtk-layer-shell": true,
+  "height": 0,
   
-  "modules-left":   ["wlr/workspaces","custom/player"],
+  "modules-left":   ["wlr/workspaces","hyprland/window","custom/player"],
   "modules-center": ["clock"],
   "modules-right":  ["tray","network","idle_inhibitor", "cpu" ,"memory", "backlight", "pulseaudio","battery"],
 
   "wlr/workspaces": {
-    "disable-scroll": false,
+    "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate"
   },
+  "hyprland/window": {
+        "format": "{}"
+    },
     "custom/player": {
     "exec": "/usr/bin/python3 /home/gaz/.config/waybar/scripts/player.py",
-    "format": "{}",
+    "format": "| {}",
     "return-type": "json",
     "on-click": "playerctl play-pause"
 },

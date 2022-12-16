@@ -1,8 +1,9 @@
-ToDo : > ALT+SHIFT+TAB -> previuos application   
+ToDo : 
        > clipboard second and third last text shortcut keys     
        > make a arch installation script like this --> 'https://github.com/Bugswriter/arch-linux-magic/blob/master/arch_install.sh'     
-       > switch back to kitty    
-       > ditch vscode , setup neovim for react and all     
+  
+       > ditch vscode , setup neovim for react and all    
+       > configure cliphist and clipman for later uses  
 
 
 The main purpose of this README is , I usually just forget what changes I've done , so ... 
@@ -61,8 +62,8 @@ hyprland-git
                         gtk-theme-name=Layan-Dark   
   
 > **gtk icon** -> uos  
-	- download and place in /usr//share/icon   
-	- and then just run 'gsettings set org.gnome.desktop.interface icon-theme uos'   
+	- download and place in /usr/share/icon   
+	- and then just run 'gsettings set org.gnome.desktop.interface icon-theme {theme-folder}'   
   
 > **gurb theme** -> blur-grub2    
   

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import os
 import logging
 import sys
 import signal
@@ -39,6 +40,9 @@ def on_metadata(player, metadata, manager):
     elif player.get_artist() != '' and player.get_title() != '':
         track_info = '{artist} - {title}'.format(artist=player.get_artist(),
                                                  title=player.get_title())
+        if player.get_title() == "Baarish" and player.get_artist() == "Mohammed Irfan":
+            os.system("playerctl -p spotify position +40")
+            
     else:
         track_info = player.get_title()
 

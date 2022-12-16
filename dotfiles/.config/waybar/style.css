@@ -43,7 +43,7 @@ tooltip {
 }
 
 
-#cpu,#memory,#custom-player,#idle_inhibitor,#temperature, #custom-caffeine, #clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight {
+#cpu,#memory,#custom-player,#idle_inhibitor,#temperature, #custom-caffeine, #clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight, #window {
   padding: 0px 10px;
   margin: 3px 0px;
 }
@@ -148,11 +148,15 @@ tooltip {
 
 #custom-player{
   color: #7287fd;
-  margin-left : 10px;
 }
 #custom-player:hover{
 	transition-duration:1s;
 	border: 0.6px solid #209fd5;
 	border-radius:80px;
 
+}
+
+#window {
+	border : 0.5px solid #209fd5;
+	border-radius : 100px;
 }
