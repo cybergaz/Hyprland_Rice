@@ -234,6 +234,10 @@ alias spd="speedtest"
 alias liveserver="live-server --browser=microsoft-edge-stable"
 alias lokate="sudo updatedb && sudo locate"
 alias hyper="vim ~/.config/hypr/hyprland.conf"
+
+alias musicspace="cd $HOME/Desktop/musicspace"
+alias cinespace="cd $HOME/Desktop/cinespace"
+
 function workspace() {
 	"$HOME/Desktop/workspace/$1" 
 
@@ -263,11 +267,13 @@ function usbmount() {
 alias cin="xclip -selection c"
 alias cout="xclip -selection clipboard -o"
 alias gittoken="xclip -selection clipboard $HOME/Desktop/workspace/my_token"
-alias hhh="history | cut -b 8- | fzf | $shell"
+alias hs="history"
 
 export MOZ_ENABLE_WAYLAND="1"
 export EDITOR="vim"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
+PROMPT_EOL_MARK=''
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
@@ -278,4 +284,4 @@ export EDITOR="vim"
 #export PATH="$HOME/Downloads/jdk-18.0.2/bin:$HOME/Downloads/speedtest_dir:$PATH"
 
 
-export PATH=$PATH:/home/gaz/.spicetify
+export PATH=$PATH:$HOME/.spicetify

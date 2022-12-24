@@ -1,8 +1,5 @@
 ToDo : 
-       > clipboard second and third last text shortcut keys     
-       > make a arch installation script like this --> 'https://github.com/Bugswriter/arch-linux-magic/blob/master/arch_install.sh'     
-  
-       > ditch vscode , setup neovim for react and all    
+       > ditch vscode , setup neovim for react and all and disable arrow keys in nvim       
        > configure cliphist and clipman for later uses  
 
 
@@ -100,3 +97,8 @@ hyprland-git
     git clone https://github.com/dln/wofi-emoji.git   ( use your wofi-emoji script )   
         
     yay -S wtype wl-clipboard ttf-twemoji-color noto-fonts-emoji
+
+## Only For My short-term memory 📝   
+    
+    # ______________Environment Variables
+    /etc/environment

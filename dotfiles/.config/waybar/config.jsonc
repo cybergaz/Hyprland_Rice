@@ -1,8 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "mode": "dock",
-  "gtk-layer-shell": true,
+  /*"mode": "dock",*/
   "height": 0,
   
   "modules-left":   ["wlr/workspaces","hyprland/window","custom/player"],
@@ -19,7 +18,7 @@
     },
     "custom/player": {
     "exec": "/usr/bin/python3 /home/gaz/.config/waybar/scripts/player.py",
-    "format": "| {}",
+    "format": "{}",
     "return-type": "json",
     "on-click": "playerctl play-pause"
 },
@@ -95,7 +94,7 @@
       "phone": "📞",
       "portable": "📞",
       "car": "",
-      "default": ["♪", "♪","♪"]
+      "default": ["☁️","🌧️","🌨️","⛈️"]
     }
   }
 }

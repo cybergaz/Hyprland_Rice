@@ -58,6 +58,7 @@ tooltip {
   color: #aecfff;
   border: 1px solid #1e66f5;
   border-radius: 100px;
+  background-color : rgba(0,0,0,0.2);
   opacity:1
 
 }
@@ -114,6 +115,7 @@ tooltip {
 
 
 #backlight{
+  background-color : rgba(0,0,0,0.15);
   color: #aecfff;
   border-right: none;
   border-bottom: 0.4px solid #4455ee;
@@ -123,6 +125,7 @@ tooltip {
 
 
 #pulseaudio {
+  background-color: rgba(0,0,0,0.15);
   opacity:0.9;
   color: #aecfff;
   border-left: none;
@@ -139,6 +142,7 @@ tooltip {
 }
 
 #battery{
+  background-color : rgba(0,0,0,0.2);
   color: #aecfff;
   margin: 3px 7px;
   border: 0.7px solid #8839ef;
@@ -148,6 +152,8 @@ tooltip {
 
 #custom-player{
   color: #7287fd;
+  background-color : rgba(0,0,0,0.15);
+
 }
 #custom-player:hover{
 	transition-duration:1s;
@@ -157,6 +163,8 @@ tooltip {
 }
 
 #window {
+  	background-color : rgba(0,0,0,0.1);
 	border : 0.5px solid #209fd5;
 	border-radius : 100px;
+	margin-right : 5px;
 }
