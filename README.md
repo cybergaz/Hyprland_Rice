@@ -1,6 +1,5 @@
 ToDo : 
        > ditch vscode , setup neovim for react and all and disable arrow keys in nvim       
-       > configure cliphist and clipman for later uses  
 
 
 The main purpose of this README is , I usually just forget what changes I've done , so ... 
