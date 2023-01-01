@@ -14,7 +14,7 @@ wayland-protocols
 pkgconf    
 ninja   
 swaybg    
-waybar-hyprland   
+waybar-hyprland-git   
 swaylock-effects   
 waylogout-git   
 brightnessctl  
@@ -27,7 +27,7 @@ sddm
 hyprland-git 
 ```
 ## Additional packages :
-	kickoff  
+	wofi   
 	kitty  
 	alacritty  
 	nemo  
@@ -36,7 +36,12 @@ hyprland-git
 	nitch  
 	btop  
 	swayimg 
-	swww 
+	swww
+  hyprpicker-git
+  cliphist 
+  wl-clipboard
+  
+
 		
 
 <br>
